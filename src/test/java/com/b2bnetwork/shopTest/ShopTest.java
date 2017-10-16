@@ -34,7 +34,7 @@ public class ShopTest {
 //				nameOfDriver = "chromedriver.exe";
 //			}
 //			System.setProperty("webdriver.chrome.driver", workingDirectory+separator+"resources"+separator+nameOfDriver);
-			System.setProperty("webdriver.chrome.driver", ".\\resources\\chromedriver.exe");
+//			System.setProperty("webdriver.chrome.driver", ".\\resources\\chromedriver.exe");
 			webDriver = new ChromeDriver();
 			//na potrzeby tych testów zakładam że wszystkie testy rozpoczynam od strony startowej linkedin
 			webDriver.get("http://automationpractice.com/index.php");
