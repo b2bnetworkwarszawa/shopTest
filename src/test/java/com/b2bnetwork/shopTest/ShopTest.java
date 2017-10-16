@@ -1,5 +1,6 @@
 package com.b2bnetwork.shopTest;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -39,9 +40,10 @@ public class ShopTest {
 //				nameOfDriver = "chromedriver.exe";
 //			}
 //			System.setProperty("webdriver.chrome.driver", workingDirectory+separator+"resources"+separator+nameOfDriver);
-//			System.setProperty("webdriver.chrome.driver", ".\\resources\\chromedriver.exe");
-//			webDriver = new ChromeDriver();
-			webDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.chrome());
+			String file = new File("src/main/resources/chromedriver.exe").getAbsolutePath();
+			System.setProperty("webdriver.chrome.driver", file);
+			webDriver = new ChromeDriver();
+//			webDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.chrome());
 			//na potrzeby tych testów zakładam że wszystkie testy rozpoczynam od strony startowej linkedin
 			webDriver.get("http://automationpractice.com/index.php");
 		}
