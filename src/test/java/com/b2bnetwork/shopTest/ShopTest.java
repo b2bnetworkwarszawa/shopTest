@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class ShopTest {
@@ -40,7 +41,7 @@ public class ShopTest {
 //			System.setProperty("webdriver.chrome.driver", workingDirectory+separator+"resources"+separator+nameOfDriver);
 //			System.setProperty("webdriver.chrome.driver", ".\\resources\\chromedriver.exe");
 //			webDriver = new ChromeDriver();
-			webDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), null);
+			webDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.chrome());
 			//na potrzeby tych testów zakładam że wszystkie testy rozpoczynam od strony startowej linkedin
 			webDriver.get("http://automationpractice.com/index.php");
 		}
